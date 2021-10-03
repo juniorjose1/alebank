@@ -7,13 +7,16 @@
       <th class="tabela__cabecalho__conteudo">Valor</th>
       <th class="tabela__cabecalho__conteudo">Conta</th>
     </thead>
-    <tbody>
-      <tr class="tabela__linha">
-        <td class="tabela__conteudo"></td>
-        <td class="tabela__conteudo"></td>
-        <td class="tabela__conteudo"></td>
+    <tbody *ngIf="valuesTrans?.length > 0;else semTransferencias">
+      <tr class="tabela__linha" *ngFor="let valor of valuesTrans">
+        <td class="tabela__conteudo">{{valor.data | date : 'short'}}</td>
+        <td class="tabela__conteudo">{{valor.valor}}</td>
+        <td class="tabela__conteudo">{{valor.destino}}</td>
       </tr>
     </tbody>
   </table>
 
 </section>
+<ng-template #semTransferencias>
+  <p>Nenhuma Transferência Cadastrada !</p>
+</ng-template>
