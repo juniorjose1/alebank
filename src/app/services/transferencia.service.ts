@@ -14,4 +14,8 @@ export class TransferenciaService {
   getAll(): Observable<Transferencia[]>{
     return this.httpClient.get<Transferencia[]>(this.url);
   }
+
+  post(transferencia:Transferencia): Observable<Transferencia>{
+    return this.httpClient.post<Transferencia>(this.url,transferencia);
+  }
 }
