@@ -9,7 +9,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./extrato.component.scss']
 })
 export class ExtratoComponent implements OnInit {
-  @Input() valoresTransferencia:any[];
 
   valuesTrans:Transferencia[];
 
