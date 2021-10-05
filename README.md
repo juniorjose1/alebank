@@ -18,4 +18,10 @@ json-server --watch db.json
 
 Now if you go to http://localhost:3000/transferencias, you'll get all transfers in JSON and with the Angular API running, you will access `http://localhost:4200/` you will see all transfers obtained from HTTP communication with json-server. 
 
+## Layouts:
+
+![alt text](https://github.com/juniorjose1/alebank/blob/master/src/assets/extrato.png)
+
+![alt text](https://github.com/juniorjose1/alebank/blob/master/src/assets/nova-transferencia.png)
+
 
